@@ -3,4 +3,4 @@ A very basic graphing calculator
 
 ### Screenshot
 
-![](./preview.png)
+![](./preview.png?)
