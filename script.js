@@ -42,7 +42,7 @@ function drawFunction() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   drawGrid();
 
-  let input = document.querySelector('input').value;
+  let input = convertInput(document.querySelector('input').value);
   
   //Draws the function by cycling between all the canvas width and setting a line based on the previous point.
   for (x = -(originX); x < originX; x += 1){
@@ -58,7 +58,10 @@ function drawFunction() {
   }
 }
 
-
+function convertInput(input) {
+  input = input.replaceAll("^", "**").replaceAll(/[a-zA-Z]/g, "x");
+  return input;
+}
 
 
 
